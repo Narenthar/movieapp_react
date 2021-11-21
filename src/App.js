@@ -16,7 +16,7 @@ export default function App() {
   }
 
   function Color(){
-const [color,setColor] = useState("red")
+const [color,setColor] = useState("blue")
 
  const styles = {backgroundColor:color, fontSize:"1rem"}
 
