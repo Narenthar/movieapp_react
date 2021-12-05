@@ -108,13 +108,13 @@ export default function App() {
 //     </div>
 //   );
 // }
-function ColorBox({color}){
-  const styles = { backgroundColor: color, height:"100px", width:"100px"}
-  // const [boxcolor, setBoxcolor] = useState(colors)
-return(
-  <div style={styles}></div>
-  )
-}
+// function ColorBox({color}){
+//   const styles = { backgroundColor: color, height:"100px", width:"100px"}
+//   // const [boxcolor, setBoxcolor] = useState(colors)
+// return(
+//   <div style={styles}></div>
+//   )
+// }
 
 function Counter() {
   const [like, setLike] = useState(0);
