@@ -138,7 +138,7 @@ function Movie({name,pic,summary}){
     <Counter />
     <h1>Hey, {name}!!!</h1>
     <p>{summary}</p>
-    <button>Delete</button>
+    <button>Delete Movie</button>
     </div>
   )
 }
