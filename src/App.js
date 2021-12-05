@@ -81,32 +81,39 @@ export default function App() {
 
   return (
     <div className="App">
-      <Color />
+      {/* <Color /> */}
       
       {movies.map((user, index)=>{return(<Movie key={index} name={user.name} pic={user.pic} summary={user.summary}/>)})}
     </div>
   );
 }
 
-function Color() {
-  const [color, setColor] = useState("blue");
+// function Color() {
+//   const [color, setColor] = useState("blue");
 
-  const styles = { backgroundColor: color, fontSize: "1rem", margin:"10px 0px" };
-  // const InitalColors = ["red", "pink", "yellow"]
-  const  [colors, setColors] = useState([]);
-  return (
-    <div>
-      <input
-        value={color}
-        style={styles}
-        onChange={(event) => setColor(event.target.value)}
-        placeholder="Enter a Color"
-      />
-      <button className="addMovieButton" onClick={()=>setColors([...colors , color])}>Add Color</button>
-      {colors.map((clr)=><ColorBox color={clr}/>)}
+//   const styles = { backgroundColor: color, fontSize: "1rem", margin:"10px 0px" };
+//   // const InitalColors = ["red", "pink", "yellow"]
+//   const  [colors, setColors] = useState([]);
+//   return (
+//     <div>
+//       <input
+//         value={color}
+//         style={styles}
+//         onChange={(event) => setColor(event.target.value)}
+//         placeholder="Enter a Color"
+//       />
+//       <button className="addMovieButton" onClick={()=>setColors([...colors , color])}>Add Color</button>
+//       {colors.map((clr)=><ColorBox color={clr}/>)}
       
-    </div>
-  );
+//     </div>
+//   );
+// }
+function ColorBox({color}){
+  const styles = { backgroundColor: color, height:"100px", width:"100px"}
+  // const [boxcolor, setBoxcolor] = useState(colors)
+return(
+  <div style={styles}></div>
+  )
 }
 
 function Counter() {
@@ -122,13 +129,7 @@ function Counter() {
   );
 }
 
-function ColorBox({color}){
-  const styles = { backgroundColor: color, height:"100px", width:"100px"}
-  // const [boxcolor, setBoxcolor] = useState(colors)
-return(
-  <div style={styles}></div>
-  )
-}
+
 function Movie({name,pic,summary}){
 
  return(
